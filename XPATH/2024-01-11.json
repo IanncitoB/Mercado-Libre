@@ -1,0 +1,18 @@
+{
+    "HOME_URL": "https://listado.mercadolibre.com.ar",
+    "LinksArticulos": ["//ol/div/li/div/div/div/div/div/a/@href", "//ol/li/div/div/div/div/a/@href", "//ol/div/li/div/div/div/div/div/div/a/@href"],
+    "LinkSiguiente": ["//li[@class=\"andes-pagination__button andes-pagination__button--next\"]/a/@href"],
+    "TotalPages": ["//li[@class=\"andes-pagination__page-count\"]/text()"],
+    "Nombre": ["//h1[@class=\"ui-pdp-title\"]/text()"],
+    "Ventas": ["//span[@class=\"ui-pdp-subtitle\"]/text()"],
+    "Disponibles": ["//span[@class=\"ui-pdp-buybox__quantity__available\"]/text()"],
+    "PrecioReal": ["//span[@class=\"andes-money-amount__fraction\"]/text()"],
+    "Moneda": ["//span[@itemprop=\"priceCurrency\"]/text()"],
+    "Descuento": ["//span[@class=\"andes-money-amount__discount\"]/text()"],
+    "LinksImagenes": ["//figure[@class=\"ui-pdp-gallery__figure\"]/img/@src"],
+    "LinkOpinion": ["//div[@class=\"ui-pdp-header__info\"]/a/@href"],
+    "Estrellas": ["//p[@class=\"ui-review-capability__rating__average ui-review-capability__rating__average--desktop\"]/text()"],
+    "Calificaciones": ["//p[@class=\"ui-review-capability__rating__label\"]/text()"],
+    "Porcentajes": ["//span[@class=\"ui-review-capability-rating__level__progress-bar__fill-background\"]/@style"],
+    "Comentarios": ["//p[@role=\"presentation\"]/text()"]
+}
