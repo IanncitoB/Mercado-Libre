@@ -51,7 +51,7 @@ class HomeScrapper:
             else:
                 raise ValueError(3, f'Error: {response.status_code}\n└─▶\tLink: {url}')
         except ValueError as ve:
-            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
+            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             num, msg = ve.args
             self.logManager.write_log(f'{time}\t{msg}')
             print(f'[DEBUG][parse_page] {time}\t{msg}')
@@ -67,7 +67,7 @@ class HomeScrapper:
             else:
                 raise ValueError(3, f'Error: {response.status_code}\n└─▶\tLink: {link}')
         except ValueError as ve:
-            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
+            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             num, msg = ve.args
             self.logManager.write_log(f'{time}\t{msg}')
             print(f'[DEBUG][parse_article] {time}\t{msg}')
@@ -98,7 +98,7 @@ class HomeScrapper:
         except IndexError:
             raise ValueError(2, f'No hay más XPATHS para LinksArticulos')
         except ValueError as ve:
-            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
+            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             num, msg = ve.args
             if num == 1:
                 self.index_XPATHS['LinksArticulos'] += 1
@@ -116,7 +116,7 @@ class HomeScrapper:
         except IndexError:
             raise ValueError(2, f'No hay más XPATHS para LinkSiguiente')
         except ValueError as ve:
-            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
+            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             num, msg = ve.args
             if num == 1:
                 self.index_XPATHS['LinkSiguiente'] += 1
@@ -134,7 +134,7 @@ class HomeScrapper:
         except IndexError:
             raise ValueError(2, f'No hay más XPATHS para TotalPages')
         except ValueError as ve:
-            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
+            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             num, msg = ve.args
             if num == 1:
                 self.index_XPATHS['TotalPages'] += 1
@@ -169,7 +169,7 @@ class HomeScrapper:
             except IndexError:
                 raise ValueError(1, f'Error 1: No se encontró algún dato en {url}')
         except ValueError as ve:
-            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
+            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             num, msg = ve.args
             # TODO: fijarse cual dato produjo error y sumarle 1 al index_XPATHS correspondiente
             self.logManager.write_log(f'{time}\t{msg}')
